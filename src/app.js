@@ -67,8 +67,7 @@ class FlappyBird extends Phaser.Scene
       this.physics.add
         .sprite(window.innerWidth / zoomLevel / 2, window.innerHeight / zoomLevel / 2, 'duck')
         .setGravityY(1000)
-        .setMaxVelocity(0, 500) 
-        .setCollideWorldBounds(true);
+        .setMaxVelocity(0, 500);
 
     // Create pipes group and call createPipes first time
     this.pipes = this.physics.add.group();
@@ -89,7 +88,13 @@ class FlappyBird extends Phaser.Scene
     setTimeout(() => this.game.loop.sleep(), 50);
   }
 
-  update () { }
+  update () {
+
+    // Reset game if duck hits game borders
+    if (this.duck.body.y < 0 || this.duck.body.y > this.sys.game.canvas.height) {
+      this.resetGame();
+    }
+  }
 
   /**
    * Create top pipe and bottom pipe
