@@ -1,0 +1,26 @@
+{
+  "name": "phaser-flappy-bird",
+  "version": "0.1.0",
+  "description": "Flappy-bird game",
+  "main": "app.js",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "webpack-dev": "webpack --watch --config webpack.dev.js",
+    "live-server-dev": "live-server --port=8085",
+    "start": "run-p webpack-dev live-server-dev",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Viciyy",
+  "license": "MIT",
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "gh-pages": "^6.1.1",
+    "html-webpack-plugin": "^5.6.0",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "phaser": "^3.70.0",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-merge": "^5.10.0"
+  }
+}
