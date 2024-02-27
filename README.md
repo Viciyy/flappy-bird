@@ -2,6 +2,6 @@
 
 Flappy-bird game for an university course (TIES476).
 
-Control keys: 
+Control keys: Jump space/mouse left, on phone tap screen
 
-Deployment:
+Deployment: https://viciyy.github.io/flappy-bird/
